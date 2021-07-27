@@ -1,0 +1,148 @@
+$white: #FFFFFF;
+$black: #000000;
+$dark-gray: lighten($black, 20%);
+$gray: lighten($black, 40%);
+$light-gray: lighten($black, 60%);
+
+$primary: #303841;
+$accent: #0781D7;
+
+body {
+  background: #F3F3F3;
+  color: $gray;
+  font-size: 14px;
+  font-family: 'Open Sans';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  text-decoration: none;
+}
+
+input {
+  display: block;
+  background: rgba($black, 0.1);
+  border: 0;
+  border-radius: 2px;
+  margin: 20px auto 10px;
+  padding: 15px 20px;
+  color: $gray;
+  line-height: normal;
+  font-size: 14px;
+}
+
+label {
+  display: block;
+  margin: 0 0 40px;
+  font-size: 18px;
+  text-align: center;
+  
+  &:before {
+    content: 'Username: ';
+    font-weight: 600;
+  }
+}
+
+.card {
+  background: $white;
+  width: 300px;
+  border-radius: 4px;
+  box-shadow: 0 10px 20px rgba($black, 0.2);
+  margin: 0 auto;
+  margin-bottom: 15px;
+  overflow: hidden;
+
+  &-header {
+    position: relative;
+    background: $primary;
+    height: 200px;
+    text-align: center;
+    overflow: hidden;
+    
+    &__avatar {
+      background: $primary;
+      background-position: center 30%;
+      background-size: 100%;
+      
+    }
+
+    img {
+        height: 100%;
+    }
+
+  }
+  
+  &-content {
+    text-align: center;
+    padding: 30px 20px;
+
+    &__username {
+      margin: 0 0 10px;
+      color: $dark-gray;
+      font-size: 14px;
+      font-weight: 600;
+      text-transform: uppercase;
+
+      .badge {
+        display: inline-block;
+        background: #FCD000;
+        border-radius: 2px;
+        margin: 0 10px 0;
+        padding: 4px;
+        color: $dark-gray;
+        font-size: 10px;
+        font-weight: 600;
+        vertical-align: middle;
+      }
+    }
+    
+    &__bio {
+      color: $gray;
+      font-size: 12px;
+    }
+  }
+  
+  &-footer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    background: #F3F3F3;
+    padding: 15px 40px;
+    color: $dark-gray;
+    font-size: 14px;
+    font-weight: 600;
+    text-align: center;
+    
+    .label {
+      display: block;
+      margin: 4px 0 0;
+      color: $gray;
+      font-size: 10px;
+      font-weight: 400;
+    }
+  }
+}
+
+.code {
+  background: rgba($black, 0.1);
+  max-width: 600px; 
+  border-radius: 2px;
+  margin: 40px auto 100px;
+  font-family: monospace;
+  overflow: hidden;  
+  overflow-x: auto;
+  
+  &:before {
+    content: 'HTML Code';
+    display: block;
+    padding: 20px 20px 0;
+    color: $dark-gray;
+    font-weight: 600;
+  }
+}
+
+.user-profile {
+  text-align: center;
+}
